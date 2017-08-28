@@ -1,0 +1,215 @@
+body {
+	background: white;
+	font-size: 14px;
+	font-family: "Raleway", sans-serif;
+	color: $headerColour;
+	font-weight: 400;
+}
+
+.wrapper {
+	width: 80%;
+	max-width: 1170px;
+	margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, p, ul {
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4 {
+	font-weight: 700;	
+}
+
+h1, h2, h4, button, .dateBox {
+	text-transform: uppercase;
+}
+
+h3, h5 {
+	text-transform: capitalize;
+}
+
+p {
+	font-family: 'Open Sans', sans-serif;
+	color: $textColour;
+}
+
+h1 {
+	color: white;
+	font-size: calc(55rem / 14);	
+}
+
+h2 {
+	font-size: calc(36rem / 14);
+}
+
+h3 {
+	font-size: calc(30rem / 14);
+}
+
+h2, h3, h5 {
+	color: $headerColour;
+}
+
+h5 {
+	font-family: 'Open Sans', sans-serif;
+}
+
+summary, h4 {
+	font-size: calc(18rem / 14);
+}
+
+img {
+	width: 100%;	
+	display: block;
+}
+
+section {
+	padding: 150px 0;
+}
+
+details {
+	box-shadow: 0 0 7.92px 0.08px rgba(0,0,0,0.1);
+	border: 1px solid white;
+	margin-bottom: 31px;
+	font-weight: 700;
+
+	&[open] {
+		box-shadow: none;
+		border: 1px solid #e1e1e1;
+		background: $buttonColour;
+		
+		& summary::before {
+			content: "-";
+		}
+	}
+
+	p {
+		padding: 20px 14px;
+		background: white;
+		font-weight: 400;
+	}
+}
+
+summary {	
+	padding: 20px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	&:hover {
+		color: white;
+		background: $buttonColour;
+		cursor: pointer;
+	}
+
+	&::-webkit-details-marker {
+		display: none;
+	}
+
+	&::before {
+		content:"+";
+		margin-right: 8px;
+	}
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+	color: $textColour;
+}
+
+button {
+	background: none;
+	color: white;
+	border: 1px solid white;
+	border-radius: 1000px;
+	padding: 25px 60px;
+	position: relative;
+	margin: 20px;
+	font-weight: 700;
+	font-size: calc(16rem / 14);
+
+	&:hover, &:active {
+		background: white;
+		color: $textColour;
+	}
+}
+
+.buttonContainer {
+	margin: 0 auto;
+	width: 700px;
+
+	button {
+		padding: 25px 40px;
+
+		&:first-child {
+			background: $buttonColour;
+			margin-right: 80px;
+			border: 1px solid $buttonColour;
+
+			&:hover, &:active {
+				background: white;
+				color: $buttonColour;
+			}
+		}	
+
+		&:last-child {
+			background: $altButtonColour;
+			border: 1px solid $altButtonColour;
+
+			&:hover, &:active {
+				background: white;
+				color: $altButtonColour;
+			}
+		}
+	}
+}
+
+.titleBlock {
+	text-align: center;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.titleBlock__subtitle {
+	color: $buttonColour;
+	text-transform: capitalize;
+	font-size: calc(20rem / 14);
+	margin: 27px 0;
+}
+
+.titleBlock__caption {
+	color: $textColour;
+	line-height: 2rem;
+}
+
+.circleBox {
+	margin: 0 auto;
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+
+	.circle {
+		background: white;
+		border-radius: 50%;
+		height: 15px;
+		width: 15px;
+		margin-right: 7px;
+		cursor: pointer;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&:first-child {
+			background: $buttonColour;			
+		}
+	}
+}
